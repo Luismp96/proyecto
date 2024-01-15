@@ -80,6 +80,7 @@
                                 <td>Registro 3 [3]</td>
                                 <td>Registro 3 [4]</td>
                             </tr>
+                            
                         </tbody>    
                             
                     </table>
