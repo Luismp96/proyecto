@@ -46,10 +46,46 @@
                     if(isset($_GET['tabla'])){
 
                         echo "<p style='color:black; text-align:center;padding-bottom:10px'><b>TABLA: </b>".$_GET['tabla']."</p>";
+                        echo "<div id='contenedor'>";
+
+                        $contador = 0;
+                        $peticion = "SHOW COLUMNS FROM " . $_GET['tabla'] . ";";
+                        $resultado = mysqli_query($conexion,$peticion);
+
+                        echo "<table>";
+                        echo "<thead>";
+                        echo "<tr>";
+                        
+                        while($fila = mysqli_fetch_assoc($resultado)){
+                            echo "<th>" .$fila['Field']."</th>";
+                        }
+                        echo "</tr>";
+                        echo "</thead>";
+
+                        $peticion = "SELECT * FROM " . $_GET['tabla'] . ";";
+                        $resultado = mysqli_query($conexion,$peticion);
+
+                        while($fila = mysqli_fetch_assoc($resultado)){
+                            echo "<tr>";
+                            $contador = 0;
+                            $id = 0;
+                            foreach($fila as $registro){
+                                echo "<td>" .$registro."</td>";
+                                if($contador == 0){
+                                $id = $registro;
+                                }
+                            $contador++;
+                            }
+                            echo"</tr>";
+                        }
+                        echo "</table>";
+                        echo "</div>";
+
                     }
+
                 ?>
                 
-                <div id="contenedor">
+                <!--<div id="contenedor">
                     <table>
 
                         <thead>
@@ -85,6 +121,8 @@
                             
                     </table>
                 </div>
+
+                -->
             </section>
         </main>
         
