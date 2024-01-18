@@ -1,0 +1,97 @@
+:root{
+    --azul:blue;
+    --gris:2px black solid;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body,html{
+    background:var(--azul);
+    font-family: sans-serif;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    border-bottom:var(--gris);
+}
+
+.contenedor{
+    width: 800px;
+    margin: auto;
+}
+
+header h1{
+    display: inline-block;
+    width: 20%;
+}
+
+header input{
+    padding: 5px;
+    width: 400px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+}
+main .contenedor{
+    height: 100%;
+    width: 100%;
+}
+main nav{
+    width: 20%;
+    height: 100%;
+    box-sizing: border-box;
+    border-right: 2px black solid;
+    float:left;
+}
+
+main section{
+    width: 60%;
+    height: 100%;
+    box-sizing: border-box;
+    float:left;
+}
+main aside{
+    width: 20%;
+    height: 100%;
+    box-sizing: border-box;
+    border-left: 2px black solid;
+    float:left;
+}
+
+footer{
+    background: grey;
+    color: white;
+    width: 100%;
+    min-height: 250px;
+    border-top: 2px black solid;
+}
+
+section article {
+    box-sizing: border-box;
+    padding: 20px;
+    border-bottom: 2px black solid;
+    text-align: center;
+    background-color: grey;
+}
+
+section article *{
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+section article h3{
+    color: brown;
+    /*Posibilidad de pinchar al estar encima */
+    cursor: pointer;
+}
+
+section article time{
+    font-weight: bold;
+}
