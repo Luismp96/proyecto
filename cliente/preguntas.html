@@ -15,6 +15,7 @@
             <div class="contenedor">
                 <h1>Preguntas</h1>
                 <input type="text" id="buscador">
+                <button id="iniciarsesion">Iniciar Sesion</button>
             </div>
             
         </header>
@@ -25,14 +26,6 @@
                 </nav>
                 <section>
 
-                <!--PLANTILLA -->
-                <template id="plantillapregunta">
-                    <article>
-                        <h3>Titulo de la Pregunta</h3>
-                        <time>2024-01-17</time>
-                        <p>Texto de la Pregunta</p>
-                    </article>
-                </template>
 
                 </section>
                 <aside>
@@ -45,6 +38,47 @@
                 (c) 2023 Luis Martin
             </div>  
         </footer>
+        <!--modal para inicio de sesion-->
+        <div id="modal">
+            <div id="contenedormodal">
+            </div>
+        </div>
+        <div id="plantillas">
+            <!--plantilla para la pregunta-->
+            <template id="plantillapregunta">
+                <article>
+                    <h3>Titulo de la Pregunta</h3>
+                    <time>2024-01-17</time>
+                    <p>Texto de la Pregunta</p>
+                </article>
+            </template>
+            <!--plantilla para las respuestas-->
+            <template id="plantillarespuesta">
+                <article class="respuesta">
+                    <time>2024-01-17</time>
+                    <p>Texto de la Pregunta</p>
+                </article>
+            </template>
+            <!--plantilla cabecera de respuestas-->
+            <template id="cabecerarespuestas">
+                <article class="cabecera">
+                    <p>Texto Cabecera</p>
+                </article>
+            </template>
+            <!--plantilla incio de sesion-->
+            <template id="iniciosesion">
+                <h3>INICIO DE SESION</h3>
+                <input type="text" id="usuario">
+                <input type="password" id="contrasena">
+                <button id="enviainiciosesion"><b>Entrar</b></button>
+            </template>
+            <!--plantilla cuando no hay resultados-->
+            <template id="plantillasinresultado">
+                <article class="sinrespuesta">
+                    <p>No hay respuestas a esta pregunta.</p>
+                </article>
+            </template>
+        </div>
     </body>
 
 
