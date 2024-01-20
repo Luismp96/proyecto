@@ -5,12 +5,6 @@ window.onload = function(){
     .then(function(response){
         return response.json()
     })
-    //.then(function(datos){
-    //    for(let i=0;i<datos.length;i++){
-    //        let articulo = document.createElement("article");
-    //        document.querySelector('section').appendChild(articulo)
-    //    }
-    //})
     //UTILIZANDO TEMPLATE
     .then(function(datos){
 

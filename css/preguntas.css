@@ -15,7 +15,13 @@ body,html{
 
 header{
     width: 100%;
+    height: 150px;
     border-bottom:var(--gris);
+    background: linear-gradient(blue, black);
+}
+header .contenedor{
+    padding-top: 50px;
+    text-align: center;
 }
 
 .contenedor{
@@ -26,13 +32,15 @@ header{
 header h1{
     display: inline-block;
     width: 20%;
+    color:white;
 }
 
 header input{
     padding: 5px;
-    width: 400px;
-    margin-left: 5px;
-    margin-bottom: 5px;
+    width: 420px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 5px;
 }
 
 main{
@@ -49,6 +57,7 @@ main nav{
     box-sizing: border-box;
     border-right: 2px black solid;
     float:left;
+    background: black;
 }
 
 main section{
@@ -56,6 +65,7 @@ main section{
     height: 100%;
     box-sizing: border-box;
     float:left;
+    background: black;
 }
 main aside{
     width: 20%;
@@ -63,6 +73,7 @@ main aside{
     box-sizing: border-box;
     border-left: 2px black solid;
     float:left;
+    background: black;
 }
 
 footer{
@@ -71,14 +82,21 @@ footer{
     width: 100%;
     min-height: 250px;
     border-top: 2px black solid;
+    background: linear-gradient(black, blue);
+}
+
+footer .contenedor{
+    text-align: center;
+    font-size: medium;
 }
 
 section article {
     box-sizing: border-box;
     padding: 20px;
-    border-bottom: 2px black solid;
+    border: 2px white solid;
     text-align: center;
-    background-color: grey;
+    background-color: black;
+    color:white;
 }
 
 section article *{
