@@ -1,7 +1,7 @@
 
 //CARGA INICIAL PREGUNTAS AL ABRIR VENTANA
 window.onload = function(){
-    fetch("../../proyectocopia/API/preguntas.php")
+    fetch("../../proyecto/API/preguntas.php")
     .then(function(response){
         return response.json()
     })
@@ -50,7 +50,7 @@ window.onload = function(){
             console.log(nombre);
             console.log(contrasena);
 
-            fetch("../../proyectocopia/API/login.php?usuario="+nombre+"&contrasena="+contrasena)
+            fetch("../../proyecto/API/login.php?usuario="+nombre+"&contrasena="+contrasena)
             .then(function(response){
                     return response.json()
             })
@@ -78,7 +78,7 @@ function cargaArticuloSeleccionado(identificador){
 
     document.querySelector('section').innerHTML = "";
 
-    fetch("../../proyectocopia/API/preguntayrespuestas.php?id="+identificador)
+    fetch("../../proyecto/API/preguntayrespuestas.php?id="+identificador)
     .then(function(response){
         return response.json()
     })
