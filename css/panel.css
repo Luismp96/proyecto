@@ -1,5 +1,4 @@
 
-
 *{
     margin:0px;
     padding:0px;
@@ -59,6 +58,7 @@ section{
     box-sizing:border-box;
     border-bottom: black 2px solid;
     border-right: black 2px solid;
+    text-align: center;
 }
 
 nav ul{
@@ -71,16 +71,16 @@ nav ul li{
     padding:10px;
     border-bottom: black 2px solid;
     text-align: center;
+    font-weight: bold;
 }
 
 nav ul li a{
     text-decoration:none;
     color:black;
-    
 }
 
 #contenedor{
-    background:black;
+    background:white;
     width:100%;
     height:90%;
     padding:20px;
@@ -88,12 +88,15 @@ nav ul li a{
     border-radius:5px;
     box-shadow:5px 10px rgba(0,0,0,0.1);
     margin-bottom: 20px;
+    margin-top: 10px;
+    overflow-y: scroll;
 }
 table{
     width:100%;
     height:100%;
     background:white;
     border: black 2px solid;
+    border-collapse: collapse;
 }
 
 table tbody tr td{
@@ -113,3 +116,54 @@ table tbody tr:nth-child(odd){
     background:#39356a;
     border: black 2px solid;
 }
+
+.boton{
+    display: inline-block;
+    height: 15px;
+    font-size: 10px;
+    line-height: 20px;
+    border-radius: 5px;
+    text-align: center;    
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nuevo{
+    background: blue;
+    color: white;
+}
+.eliminar{
+    background: red;
+    color: white;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+    
+}
+.contenedorcruz{
+    height: 100%;
+    width: 100%;
+}
+
+section p{
+    display: inline-block;
+    
+}
+
+#contenedor h4{
+    color: black;
+    margin-bottom: 10px;
+}
+
+form{
+    columns: 2;
+}
+
+input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    margin:5px;
+}
+
