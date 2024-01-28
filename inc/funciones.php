@@ -1,6 +1,5 @@
 <?php
 
-    //COMPROBAMOS QUE HAYA REGISTRADO UN USUARIO 
     function comprobarAcceso(){
 
         if(!isset($_SESSION['usuario'])){
@@ -8,7 +7,6 @@
         }
     }
 
-    //MENU DE NAVEGACION: TABLAS DEL PROYECTO
     function menuNavegacion($conexion){
 
         $peticion = "SHOW TABLES;";
@@ -22,7 +20,6 @@
         }
     }
 
-    //FUNCION PARA MOSTRAR EL NOMBRE DE LAS COLUMNAS DE LA TABLA COMO CABECERA
     function mostrarCabecera($conexion){
 
         if(isset($_GET['tabla'])){
@@ -41,7 +38,6 @@
        
     }
 
-    //FUNCION PARA MOSTRAR NOMBRE DE LA TABLA AL SER SELECCIONADA
     function mostrarNombreTabla(){
         if(isset($_GET['tabla'])){
 
@@ -50,7 +46,6 @@
         }
     }
 
-    //FUNCION PARA MOSTRAR EL CONTENIDO DE CADA UNA DE LAS TABLAS CUANDO ES SELECCIONADA
     function mostrarDatos($conexion){
         if(isset($_GET['tabla'])){
 
@@ -72,10 +67,7 @@
                 $contador++;
                 }
                 echo "<th>
-                        <div class='contenedorcruz'>
-                            <a href='?accion=eliminar&id=".$id."&tabla=".$_GET['tabla']."' class='boton eliminar'>X</a>
-                        </div>
-                        
+                        <a href='?accion=eliminar&id=".$id."&tabla=".$_GET['tabla']."' class='boton eliminar'>X</a>
                     </th>";
                 echo"</tr>";
             }
@@ -84,7 +76,6 @@
         }
     }
 
-    //FUNCION PARA INSERTAR REGISTRO EN CADA TABLA
     function insertarRegistro($conexion){
 
         $consulta = "INSERT INTO ".$_GET['tabla']." VALUES (NULL,";
@@ -95,13 +86,11 @@
         }
 
         $consulta = substr($consulta,0,-1);
-        $consulta .= ");";
-
+        $consulta .= ")";
         mysqli_query($conexion,$consulta);
 
     }
 
-    //FUNCION QUE MUESTRA FORMULARIO PARA INSERTAR EN FUNCION DE CADA TABLA
     function formularioInsertar($conexion){
         echo "<h4>Nuevo elemento para la tabla: ".$_GET['tabla']."</h4>";
         echo "<form action='?accion=insertar&tabla=".$_GET['tabla']."' method='POST'>";

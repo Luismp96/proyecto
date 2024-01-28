@@ -2,7 +2,7 @@
 
     include "../config.php";
 
-    $peticion = "SELECT * FROM preguntas;";
+    $peticion = "SELECT * FROM preguntas ORDER BY fecha DESC;";
     $resultado = mysqli_query($conexion,$peticion);
     $datos = [];
         

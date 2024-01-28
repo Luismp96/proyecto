@@ -1,4 +1,5 @@
 
+
 *{
     margin:0px;
     padding:0px;
@@ -88,7 +89,6 @@ nav ul li a{
     border-radius:5px;
     box-shadow:5px 10px rgba(0,0,0,0.1);
     margin-bottom: 20px;
-    margin-top: 10px;
     overflow-y: scroll;
 }
 table{
@@ -126,6 +126,8 @@ table tbody tr:nth-child(odd){
     text-align: center;    
     text-decoration: none;
     padding: 10px;
+    margin-bottom:5px;
+    margin-left: 5px;
 }
 
 .nuevo{
@@ -135,15 +137,6 @@ table tbody tr:nth-child(odd){
 .eliminar{
     background: red;
     color: white;
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    border-radius: 0px;
-    
-}
-.contenedorcruz{
-    height: 100%;
-    width: 100%;
 }
 
 section p{
