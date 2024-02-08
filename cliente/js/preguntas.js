@@ -1,6 +1,7 @@
 
 //CARGA INICIAL PREGUNTAS AL ABRIR VENTANA
 window.onload = function(){
+
     cargaPreguntas();
 
     document.getElementById('iniciarsesion').onclick = function(){
@@ -20,7 +21,7 @@ window.onload = function(){
             console.log(nombre);
             console.log(contrasena);
 
-            fetch("../../proyectocopia1/API/login.php?usuario="+nombre+"&contrasena="+contrasena)
+            fetch("../../proyecto/API/login.php?usuario="+nombre+"&contrasena="+contrasena)
             .then(function(response){
                     return response.json()
             })
@@ -111,7 +112,7 @@ window.onload = function(){
             boton.onclick = function(){
                 console.log("Creamos Nueva Entrada...");
 
-                fetch("../../proyectocopia1/API/nuevapregunta.php?titulo="+titulo.value+"&textopregunta="+textopregunta.value+"&palabrasclave="+palabrasclave.value+"&categorias="+categorias.value)
+                fetch("../../proyecto/API/nuevapregunta.php?titulo="+titulo.value+"&textopregunta="+textopregunta.value+"&palabrasclave="+palabrasclave.value+"&categorias="+categorias.value)
                 .then(function(response){
                     
                     cargaPreguntasCorrecto();
@@ -135,7 +136,7 @@ function cargaArticuloSeleccionado(identificador){
 
     document.querySelector('section').innerHTML = "";
 
-    fetch("../../proyectocopia1/API/preguntayrespuestas.php?id="+identificador)
+    fetch("../../proyecto/API/preguntayrespuestas.php?id="+identificador)
     .then(function(response){
         return response.json()
     })
@@ -195,7 +196,7 @@ function cargaArticuloSeleccionado(identificador){
 //INICIO P3 PROYECTO
 function cargaPreguntas(){
     
-    fetch("../../proyectocopia1/API/preguntas.php")
+    fetch("../../proyecto/API/preguntas.php")
     .then(function(response){
         return response.json()
     })
@@ -229,7 +230,7 @@ function cargaPreguntas(){
     })
 }
 function cargaPreguntasCorrecto(){
-    fetch("../../proyectocopia1/API/preguntas.php")
+    fetch("../../proyecto/API/preguntas.php")
     .then(function(response){
         return response.json()
     })

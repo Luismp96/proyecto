@@ -123,6 +123,7 @@ table tbody tr:nth-child(odd){
     font-size: 10px;
     line-height: 20px;
     border-radius: 5px;
+    display: inline-block;
     text-align: center;    
     text-decoration: none;
     padding: 10px;
@@ -130,9 +131,26 @@ table tbody tr:nth-child(odd){
     margin-left: 5px;
 }
 
+.operaciones{
+    width: 200px;
+}
+
+/*P4 INICIO*/
+
+.actualizar{
+    background-color: yellow;
+    color: black;
+}
+/*P4 FIN*/
+
 .nuevo{
     background: blue;
     color: white;
+}
+
+#all{
+    background-color: red;
+    color:white;
 }
 .eliminar{
     background: red;
@@ -153,7 +171,7 @@ form{
     columns: 2;
 }
 
-input{
+input,select{
     width: 100%;
     box-sizing: border-box;
     padding: 5px;

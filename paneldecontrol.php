@@ -9,6 +9,17 @@
             case "insertar":
                 insertarRegistro($conexion);
                 break;
+            //P4 INICIO
+            case "eliminar":
+                eliminarRegistro($conexion);
+                break;
+            case "actualizar":
+                actualizarRegistro($conexion);
+                break;
+            case "borrartodo":
+                borrartodo($conexion);
+                break;
+            //P4 FIN
         }
     }
 ?>
@@ -44,8 +55,7 @@
                 <?php
                     mostrarNombreTabla();
                 ?>
-                <a href="?operacion=nuevo&tabla=<?php echo $_GET['tabla'] ?>" class="boton nuevo">AÑADIR</a>
-
+                
                 <div id='contenedor'>
 
                     <?php
@@ -71,6 +81,9 @@
                             switch($_GET['operacion']){
                                 case "nuevo":
                                     formularioInsertar($conexion);
+                                    break;
+                                case "actualizar":
+                                    formularioActualizar($conexion);
                                     break;
                             }
                         }
